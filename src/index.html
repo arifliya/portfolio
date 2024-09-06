@@ -10,7 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext,cyrillic,greek-ext,greek,vietnamese' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://use.typekit.net/kqh2xfl.css">
 <link rel="stylesheet" href="./assets/scss/main.scss">
-<!-- write your code here -->
+
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script src="./assets/js/Homepage-animationCanvas.js"></script>
 <script>
@@ -28,8 +28,8 @@ function init() {
 	loader.loadManifest(lib.properties.manifest);
 }
 function handleFileLoad(evt, comp) {
-	var images=comp.getImages();	
-	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+	var images=comp.getImages();
+	if (evt && (evt.item.type == "images")) { images[evt.item.id] = evt.result; }
 }
 function handleComplete(evt,comp) {
 	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
@@ -41,21 +41,19 @@ function handleComplete(evt,comp) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
 	exportRoot = new lib.HomepageanimationCanvas();
-	stage = new lib.Stage(canvas);	
+	stage = new lib.Stage(canvas);
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
 		stage.addChild(exportRoot);
 		createjs.Ticker.framerate = lib.properties.fps;
 		createjs.Ticker.addEventListener("tick", stage);
-	}	    
+	}
 	//Code to support hidpi screens and responsive scaling.
-	AdobeAn.makeResponsive(true,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.makeResponsive(true,'both',false,1,[canvas,anim_container,dom_overlay_container]);
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
 }
 </script>
-<!-- write your code here -->
-
 
 </head>
 <body onload="init();">
@@ -125,19 +123,19 @@ function handleComplete(evt,comp) {
       </div>
 </div>
 <div id="about-me" class="container-fluid abstract">
-  <h2 class="hideme">Passionate, innovative and dynamic.</h2>
+  <h2 class="hideme" >Passionate, innovative and dynamic.</h2>
 </div>
 
 <div class="container-fluid hideme section">
   <div class="row justify-content-md-center">
-    <div class="col col-xxl-9">
+    <div class="col col-xl-6 col-lg-9 col-md-11">
       <h2>About me</h2>
-      <p class="about-text">An experienced UX/UI designer with a passionate, innovative and dynamic approach to digital with a keen interest in current trends in UX. A natural flair for creativity and exceptionally skilled in UX/UI design and front-end development.</p>
+      <p class="about-text">I am an experienced UX/UI designer with a passionate, innovative and dynamic approach to digital with a keen interest in current trends in UX. A natural flair for creativity and exceptionally skilled in UX/UI design and front-end development.</p>
     </div>
   </div>
 </div>
   
-<div id="my-work" class="container-fluid section grey-background"> 
+<div id="my-work" class="container-fluid section"> 
   <h2>My work</h2>
   
   <div class="row justify-content-md-center">
@@ -149,7 +147,7 @@ function handleComplete(evt,comp) {
     </div>
     <div class="col-md-auto mt-5 ms-md-4">
       <a href="#" class="block b2">
-          <div class="link-text black">View Arif's GOV UK project</div>
+          <div class="link-text black">View Arif's GOV.UK project</div>
         <img src="../src/assets/images/esfa.png" alt="">
       </a>
     </div>
@@ -170,7 +168,13 @@ function handleComplete(evt,comp) {
   </div>
 
 </div>
+<footer class="container-fluid abstract">
+  <p class="body-text-white" >© Copyright Arif Liya Ltd 2024</p>
+</footer>
+    
     <script type="module" src="./assets/js/main.js"></script>  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  
 </body>
 </html>
