@@ -1,0 +1,752 @@
+
+
+.modal-image { /* positioning the image */
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    z-index: 3;
+    -webkit-animation-name: slideDown;
+    -webkit-animation-duration: 0.5s;
+    animation-name: slideDown;
+    animation-duration: 0.5s;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    
+}
+
+.modal.show {
+    display: flex;
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.5s;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
+.dark-transparency {
+    position: fixed; /* Stay in place */
+    z-index: 4; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.25); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.5s;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
+
+
+/* Modal Content */
+.modal-content {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    background-color: #fefefe;
+    width: 100%;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.18);
+    min-height: 344px;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.5s;
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    
+}
+
+
+
+.modal-content-size {
+    @extend .modal-content;
+    display: none;
+    min-height: 344px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    z-index: 6;
+    
+    .size-header {
+        margin-bottom: 10px;
+        justify-content: space-between;
+        
+        p {
+            text-transform: uppercase;
+            letter-spacing: $letter-spacing;
+            font-size: 14px;
+        }
+        
+        .down-arrow {
+            background-image: url(../images/downChevron.svg);
+            background-repeat: no-repeat;
+            width: 18px;
+            height: 10px;
+            align-self: center;
+        }
+    }
+    
+    .wrap {
+        flex-wrap: wrap;
+
+    }
+    
+    .size-image-container {
+        
+        width: 16.4%;
+        margin-right: 3.6%;
+        
+        .size-image {
+            align-self: center;
+            width: 100%;
+            
+        }
+        
+    }
+    
+    .sizes-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+    
+        .sizes {
+            border: 1px solid $light-grey;
+            border-radius: 5px;
+            min-width: 48px;
+            height: 48px;
+            text-align: center;
+            line-height: 45px;
+            margin-bottom: 10px;
+            font-size: 14px;
+    //        margin-left: 1.8%;
+            margin-right: 3.6%;
+        }
+    
+    
+        .active {
+            border: 2px solid $main-cta;
+            background-color: $button-shade;
+            line-height: 42px;
+        }
+    }
+    
+    .add-to-basket-main {
+        display: block;
+        background-color: $main-cta;
+        letter-spacing: $letter-spacing;
+        border-radius: 4px;
+        width: 100%;
+        padding: 15px;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 14px;
+        align-self: flex-end;
+        cursor: pointer;
+        margin-top: 15px;
+        color: white;
+        margin-bottom: 30px;
+    }
+    
+    .col {
+        
+        align-items: center;
+        margin-bottom: 30px;
+        
+        .link {
+            margin-top: 20px;
+//            font-size: 14px;
+        }
+    }
+    
+    
+}
+
+
+
+
+.dark-transparency-added {
+    @extend .dark-transparency;
+    display: none;
+    z-index: 7;
+    position: fixed;
+    
+}
+
+.modal-content-added {
+    display: none;
+    position: fixed;
+    top: 85px;
+    right: 0;
+    z-index: 8;
+    background-color: #fefefe;
+    width: 100%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.18);
+    -webkit-animation-name: slideDown;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideDown;
+    animation-duration: 0.4s;
+    
+
+    .size-header {
+        background-color: $very-light-grey;
+        padding: 12px;
+    }
+    
+    .header {
+        text-transform: uppercase;
+        letter-spacing: $letter-spacing;
+        font-size: 14xp;
+        text-align: center;
+    }
+    
+    .style-image {
+        flex: 2;
+    }
+    
+    .item-details {
+        display: flex;
+        flex-direction: column;
+        flex: 3;
+        margin-left: 15px;
+        font-weight: 600;
+        
+        .italics {
+            font-weight: 500;
+            font-style: italic;
+            letter-spacing: $letter-spacing-small;
+        }
+        
+        .body-font {
+            font-size: $font-size-body;
+            letter-spacing: $letter-spacing;
+            
+        }
+    }
+}
+
+
+/* The Close Buttons */
+.close {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/Close.svg);
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 97px;
+    right: 10px;
+    z-index: 9;
+}
+
+.close:hover,
+.close:focus {
+    color: #a3a3a3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close-in-modal {
+    display: none;
+}
+
+
+.modal-body {
+    padding: 10px;
+    width: 100%;
+    position: relative;
+//    height: 360px;
+    
+    .style-with-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        margin: 0 5px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 16px;
+        min-width: 110px;
+        position: relative;
+        
+        .price1, .price2, .price3 {
+            font-size: $font-size-body;
+        }
+        
+    }
+    
+    .title-container {
+        display: flex;
+        min-height: 45px;
+        margin-top: 12px;
+        
+        p {
+            line-height: $line-height-small;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
+    
+    .style-with-image {
+        width: 100%;
+    }
+    
+    span {
+        font-size: 12px;
+    }
+    
+    .stars {
+        display: flex;
+        font-size: 10px;
+        justify-content: center;
+    }
+    
+    .add-to-basket {
+        @extend .add-to-basket-main;
+        background-color: black;
+        padding: 7px 4px;
+        font-size: 11px;
+        letter-spacing: $letter-spacing-small;
+        border-radius: 4px;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        margin-top: 10px;
+    }
+    
+    .dots {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 18px;
+        
+        .dot {
+            background-image: url(../images/dot-filled.svg);
+            margin: 0 4px;
+            width: 8px;
+            height: 8px;
+        }
+        
+        .dot-outline {
+            background-image: url(../images/dot-outline.svg);
+            margin: 0 4px;
+            width: 8px;
+            height: 8px;
+        }
+    }
+    
+    .heart {
+        background-image: url(../images/Favourites.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 25px;
+        height: 20px;
+        right: 10px;
+        top: 10px;
+    }
+
+}
+
+//.right-gradient {
+//    display: block;
+//    background-color: green;
+//    width: 100px;
+//    height: 100%;
+//    position: absolute;
+//    right: 0;
+//    top: 0;
+//    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255,1)); /* For Safari 5.1 to 6.0 */
+//    background: -o-linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255,1)); /* For Opera 11.1 to 12.0 */
+//    background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255,1)); /* For Firefox 3.6 to 15 */
+//    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255,1)); /* Standard syntax (must be last) */
+//}
+
+
+@media only screen and (min-width: 352px) { 
+    
+    .modal-content {
+        min-height: 338px;
+    }
+    
+    .modal-content-size {
+        height: 421px;
+    }
+    
+}
+
+
+@media only screen and (min-width: 568px) {
+    
+    .modal-content {
+        width: 60%; 
+        min-height: 238px; //was 338px;
+    }
+    
+    .modal-body {
+            
+            .style-with-container {
+                min-width: 90px; 
+            }
+        
+            .style-with-image {
+                width: 50%;
+            }
+            
+        }
+    
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    
+    .modal-body {
+            
+            .style-with-container {
+                min-width: 110px; 
+            }
+        
+            .style-with-image {
+                width: 100%;
+            }
+            
+        }
+    
+    
+    .modal-image {
+        margin-top: 5%;
+    }
+    
+    .modal-content {
+        width: 100%;
+    }
+    
+    .modal-content-size {
+        height: 464px;
+        
+        
+        .size-image-container {
+            width: 15%;
+        }
+        
+        .add-to-basket-main {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        
+    }
+    .close {
+        top: 120px;
+    }
+    
+    .modal-body {
+//        margin-left: 10%;
+//        margin-right: 10%;
+        padding: 25px;
+        
+
+        
+        .title-container {
+            
+            min-height: 70px;
+            
+            p {
+                line-height: $line-height-large;
+            }
+        }
+        
+        .space-items {
+            justify-content: space-between;
+        }
+        
+        .style-with-container {
+            max-width: 150px;  //200px for desktop//
+            
+            .price1, .price2, .price3 {
+                margin-top: 10px;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }  
+        }
+        
+        .dots {
+            display: none;
+        }
+        
+        .stars {
+            p {
+                font-size: 13px;
+                margin-right: 3px;
+            }
+        }
+    }
+    
+    
+    .modal-content-added {
+        width: 50%;
+        top: 112px;
+        right: 1%;
+        
+        
+        .modal-body {
+            margin-left: 0;
+            
+            .item-details {
+                
+                .italics, .body-font, span {
+                    font-size: $font-size-xbody;
+                    font-weight: 100;
+                }
+                
+                span {
+                    line-height: $line-height-large;
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+    
+    .size-width {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
+    
+}
+
+
+@media only screen and (min-width: 1024px) {
+       
+    
+    
+    .var-images-modal {
+        display: none;
+    }
+    
+    .modal-content {
+        width: 100%;
+    }
+    
+    .modal-body {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;    
+        
+        .add-to-basket {
+            font-size: $font-size-body;
+            padding: 12px 4px;
+            cursor: pointer;
+        }
+        
+    }
+    
+    
+    .modal {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0); /* Black w/ opacity */
+    }
+    
+    
+    .dark-transparency {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0); /* Black w/ opacity */
+    }
+    
+    .close {
+        display: none;
+    }
+    
+    .close-in-modal {
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/Close-black.svg);
+        background-repeat: no-repeat;
+        position: fixed;
+        bottom: 420px;
+        right: 20px;
+        z-index: 9;
+        -webkit-animation-name: fadeIn; /* Fade in the background */
+        -webkit-animation-duration: 0.4s;
+        animation-name: fadeIn;
+        animation-duration: 0.4s;
+        cursor: pointer;
+    }
+    
+    
+    .modal-content-size {
+        height: 474px;
+    
+    
+        .size-header {
+            
+
+            p {
+                font-size: $font-size-xbody;
+            }
+
+            
+        }
+        
+        .sizes {
+            cursor: pointer;
+        }
+    
+    }
+    
+    .right-gradient {
+        display: none;
+    }
+    
+    .size-width {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+    
+    .modal-body {
+        width: auto;
+       
+        position: relative;
+//        width: 70%;
+//        margin-left: 15%;
+//        margin-right: 15%;
+        
+        .style-with-container {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+    }
+    
+    
+    .modal-content-added {
+        width: 25%;
+        right: 20%;
+    }
+    
+    
+    .size-width {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+
+@media only screen and (min-width: 1400px) {
+    
+    .modal-body {
+//        width: 60%;
+//        margin-left: 20%;
+//        margin-right: 20%;
+    }
+    
+    .size-width {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+   
+    
+}
+
+
+@media only screen and (min-width: 1700px) {
+    
+    .modal-body {
+//        width: 50%;
+//        margin-left: 25%;
+//        margin-right: 25%;
+    }
+
+    .size-width {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
+}
+
+
+@media only screen and (min-width: 1900px) {
+    
+    
+    .modal-body {
+//        width: 40%;
+//        margin-left: 30%;
+//        margin-right: 30%;
+    }
+
+    .size-width {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+
+
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes slideDown {
+    from {top: -300px; opacity: 0} 
+    to {top: 40px; opacity: 1}
+}
+
+@keyframes slideDown {
+    from {top: -300px; opacity: 0} 
+    to {top: 40px; opacity: 1}
+}
+
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}

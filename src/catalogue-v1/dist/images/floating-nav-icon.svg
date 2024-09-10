@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="170px" height="163px" viewBox="0 0 170 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF">
+            <path d="M45,63 L18,63 C8.059,63 0,54.941 0,45 L0,18 C0,8.059 8.059,0 18,0 L45,0 C54.941,0 63,8.059 63,18 L63,45 C63,54.941 54.941,63 45,63" id="Fill-1"></path>
+            <path d="M152,63 L125,63 C115.059,63 107,54.941 107,45 L107,18 C107,8.059 115.059,0 125,0 L152,0 C161.941,0 170,8.059 170,18 L170,45 C170,54.941 161.941,63 152,63" id="Fill-3"></path>
+            <path d="M45,163 L18,163 C8.059,163 0,154.941 0,145 L0,118 C0,108.059 8.059,100 18,100 L45,100 C54.941,100 63,108.059 63,118 L63,145 C63,154.941 54.941,163 45,163" id="Fill-5"></path>
+            <path d="M152,163 L125,163 C115.059,163 107,154.941 107,145 L107,118 C107,108.059 115.059,100 125,100 L152,100 C161.941,100 170,108.059 170,118 L170,145 C170,154.941 161.941,163 152,163" id="Fill-7"></path>
+        </g>
+    </g>
+</svg>

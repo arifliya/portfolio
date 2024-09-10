@@ -122,8 +122,8 @@
     animation-name: fadeInOpacity;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
-    animation-duration: .35s;
-    border-bottom: 2px solid #014d6d;
+    animation-duration: .35s; 
+    border-bottom: 2px solid #014d6d
     
 }
 
@@ -144,8 +144,8 @@
   width: 100%;
   height: 4px;
   // border-radius: 4px;
-  background-color: #014d6d;
-  bottom: 0;
+  background-color: #009FE3;
+  bottom: -4px;
   left: 0;
   transform-origin: right;
   transform: scaleX(0);
@@ -155,6 +155,13 @@
 .nav-link:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+}
+
+a.active {
+  content: '';
+  position: absolute;
+  border-bottom: 4px solid #009FE3;
+  
 }
 
 }
