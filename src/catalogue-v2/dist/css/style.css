@@ -172,9 +172,9 @@ a {
   /* Full height */
   overflow: auto;
   /* Enable scroll if needed */
-  background-color: black;
+  /* background-color: black; */
   /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
   /* Black w/ opacity */
   -webkit-animation-name: fadeIn;
   /* Fade in the background */
@@ -1829,3 +1829,150 @@ footer {
         margin-left: 70px; }
   .main-spreads {
     width: 1080px; } }
+
+.hotspot.a1 {
+  left: 100px;
+  top: 50px;
+}
+
+.hotspot.a2 {
+  left: 100px;
+  top: 150px;
+}
+
+.hotspot.a3 {
+  left: 100px;
+  top: 350px;
+}
+
+.hotspot.a4 {
+  left: 100px;
+  top: 450px;
+}
+
+.hotspot.a5 {
+  left: 100px;
+  top: 550px;
+}
+
+.hotspot.a6 {
+  left: 100px;
+  top: 650px;
+}
+
+.hotspot.b1 {
+  right: 100px;
+  top: 50px;
+}
+
+.hotspot.b2 {
+  right: 100px;
+  top: 150px;
+}
+
+.hotspot.b3 {
+  right: 100px;
+  top: 350px;
+}
+
+.hotspot.b4 {
+  right: 100px;
+  top: 450px;
+}
+
+.hotspot.b5 {
+  right: 100px;
+  top: 550px;
+}
+
+.hotspot.b6 {
+  right: 100px;
+  top: 650px;
+}
+
+
+
+#scrollUp {
+  position: fixed;
+  top: -50px;
+  right: 450px;
+    z-index: 3;
+}
+
+#scrollDown {
+  position: fixed;
+  top: -90px;
+  right: 450px;
+    z-index: 3;
+    transform: rotate(180deg);
+}
+
+@media only screen and (min-width: 300px) {
+  #scrollUp {
+    position: fixed;
+    top: -50px;
+    right: 50px;
+      z-index: 3;
+      background-color: white;
+        padding: 10px;
+        border-radius: 20px;
+  }
+  
+  #scrollDown {
+    position: fixed;
+    top: -110px;
+    right: 50px;
+      z-index: 3;
+      transform: rotate(180deg);
+      background-color: white;
+        padding: 10px;
+        border-radius: 20px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  #scrollUp {
+
+    right: 50px;
+
+  }
+  
+  #scrollDown {
+
+    right: 50px;
+
+  }
+}
+
+
+@media only screen and (min-width: 1280px) {
+  #scrollUp {
+   
+    right: 150px;
+     
+  }
+  
+  #scrollDown {
+  
+
+    right: 150px;
+   
+    
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  #scrollUp {
+
+    right: 250px;
+   
+  }
+  
+  #scrollDown {
+
+
+    right: 250px;
+     
+   
+  }
+}

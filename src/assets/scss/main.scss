@@ -62,7 +62,7 @@ h4 {
 }
 
 
-a.main-cta{
+.main-cta{
   width: auto;
   font-family: futura-pt, sans-serif;
   font-weight: 600;
@@ -73,12 +73,15 @@ a.main-cta{
   text-transform: uppercase;
   border: 2px solid;
   border-radius: 34px;
-  padding: 20px 50px;
+  padding: 10px 20px;
   -o-transition:.5s;
   -ms-transition:.5s;
   -moz-transition:.5s;
   -webkit-transition:.5s;
   transition:.5s;
+  width: fit-content;
+  margin-left: auto;
+    margin-right: auto;
 
 
   &:hover {
@@ -86,6 +89,22 @@ a.main-cta{
     color: black;
     border-color: white;
   } 
+}
+
+.main-cta.black {
+  color: black;
+
+  &:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+  }
+
+}
+
+.secondary-cta {
+  @extend .main-cta;
+  padding: 10px 20px;
 }
 
 #home {
@@ -119,13 +138,20 @@ a.main-cta{
         // margin-bottom: 90px;
         
         h1 {
-          font-size: 50px;
+          font-size: 30px;
           text-align: center;
           font-weight: 700;
-          font-family: 'futura-pt';
+          // font-family: 'futura-pt';
           letter-spacing: 1;
           // margin-bottom: 30px;
           // margin-top: 40px;
+        }
+
+        .hero-sub-header {
+          text-align: center;
+          font-size: 18px;
+          color: white;
+          font-weight: 100;
         }
 
         .sub-header {
@@ -139,7 +165,7 @@ a.main-cta{
       }  
 
       .main-cta {
-        margin-top: 70px;
+        margin-top: 50px;
       }
       
       // .hero-image {
@@ -150,6 +176,10 @@ a.main-cta{
       //   }
       // }
   }
+}
+
+#animation_container {
+  margin-top: -30px;
 }
 
 .white-text {
@@ -163,6 +193,21 @@ a.main-cta{
   .hero-container {
     height: auto;
   }
+}
+
+#next-hero-bg {
+  @extend #project-home;
+  background: rgba(0, 0, 0, 0) url("../images/project-page-bg-01.png") no-repeat scroll 50% 100%;
+}
+
+#next-finance-hero-bg {
+  @extend #project-home;
+  background: rgba(0, 0, 0, 0) url("../images/project-page-bg-04.png") no-repeat scroll 90% 70%;
+}
+
+#lars-hero-bg {
+  @extend #project-home;
+  background: rgba(0, 0, 0, 0) url("../images/project-page-bg-02.png") no-repeat scroll 50% 50%;
 }
 
 
@@ -232,10 +277,10 @@ a.main-cta{
 
   h2 {
     color: white;
-    font-size: 46px;
+    font-size: 26px;
     font-weight: 600;
     font-family: 'futura-pt';
-    letter-spacing: 1;
+    // letter-spacing: 1.5px;
   }
 }
 
@@ -266,6 +311,8 @@ a.main-cta{
     line-height: 32px;
   }
 
+  
+
   .body-text-bold {
     font-weight: 700;
     font-size: 19px;
@@ -287,10 +334,16 @@ a.main-cta{
 
 .grey-background {
   background-color: $gray-200;
+  padding-bottom: 50px;
 }
+
 
 .teal-background {
   background-color: #014d6d;
+}
+
+.beige-background {
+  background-color: rgb(241, 234, 224);
 }
 
 .dark-blue-background {
@@ -314,8 +367,8 @@ a.block {
     
     .link-text {
       // font-weight: 300;
-      font-family: futura-pt, sans-serif;
-      font-size: 21px;
+      // font-family: futura-pt, sans-serif;
+      font-size: 17px;
       position: absolute;
       right: 0;
       margin: 10px 30px 10px 30px;
@@ -330,16 +383,17 @@ a.block {
         display: flex;
         flex-direction: column;
         left: 20px;
-        top: 18px;
-        font-family: futura-pt, sans-serif;
+        top: 60px;
+        font-family: sans-serif;
     
         .brand-title, .project-description, .project-name {
           color: white;
         }
 
         .brand-title {
-          font-size: 24px;
+          font-size: 18px;
           font-weight: 700;
+          
           
           .project-name {
             font-weight: 300;
@@ -386,74 +440,89 @@ a.block {
     transition: transform .2s ease-in-out;
 }
 
-  .link-text:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-  }
+.link-text:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
 
 
-  .b1 {
-    img {
-      max-width: 740px;
-    }
+.b1 {
+  img {
+    max-width: 740px;
   }
-  .b2 {
-    img {
-      max-width: 740px;
-    }
+}
+.b2 {
+  img {
+    max-width: 740px;
   }
-  .b3 {
-    img {
-      max-width: 740px;
-    }
+}
+.b3 {
+  img {
+    max-width: 740px;
   }
-  .b4 {
-    img {
-      max-width: 740px;
-    }
+}
+.b4 {
+  img {
+    max-width: 740px;
+  }
+}
+
+// footer {
+
+//   margin-top: 60px;
+
+// }
+
+.flex-column {
+  flex-direction: column;
+}
+
+.project-section {
+  @extend .section;
+
+  .row {
+    margin-bottom: 60px;
   }
 
-  footer {
-
-    margin-top: 60px;
-    
+  .centre-text {
+    text-align: center;
   }
 
-  .project-section {
-    @extend .section;
-  
-    .row {
-      margin-bottom: 60px;
-    }
-  
-    .no-margin-bottom{
-      margin-bottom: 0;
-    }
-  
-    h2 {
-      text-align: left;
-      margin-bottom: 36px;
-    }
-  
-    h3 {
-      @extend h2; 
-      font-size: 30px;
-      letter-spacing: .5px;
-      text-transform: initial;
-    }
-  
-    h4 {
-      @extend h3; 
-      font-size: 26px;
-      font-weight: 400;
-    }
-  
-    .about-text {
-      text-align: initial;
-      margin: 0 0 20px 0;
-    }
+  .no-margin-bottom{
+    margin-bottom: 0;
   }
-  
+
+  h2 {
+    text-align: left;
+    margin-bottom: 36px;
+  }
+
+  h3 {
+    @extend h2; 
+    font-size: 30px;
+    letter-spacing: .5px;
+    text-transform: initial;
+  }
+
+  h4 {
+    @extend h3; 
+    font-size: 26px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .about-text {
+    text-align: initial;
+    margin: 0 0 20px 0;
+  }
+
+  .caption-text {
+    @extend .body-text;
+    margin-top: 10px
+  }
+}
+
   
   .section-image {
   margin-bottom: 40px;
@@ -489,22 +558,59 @@ a.block {
     #home {
       .hero-container {
         justify-content: space-around;
+        
         .hero-text { 
-            
             h1 {
-              font-size: 65px;
-              
+              font-size: 60px; 
             }
-            
+
+            .hero-sub-header {
+              font-size: 24px;
+              letter-spacing: 1px;
+              margin-top: 40px;
+            }
+          }  
+
+          .main-cta {
+            margin-top: 0;
           }  
     
         }
       }
 
+      .abstract {
+        h2 {
+          font-size: 36px;
+        }
+      }
+
+      #animation_container {
+        margin-top: -60px;
+      }
+
+      .main-cta {
+        padding: 20px 40px;
+      }
+
+      .secondary-cta {
+        padding: 10px 20px;
+      }
+      
+
       #project-home {
         @extend #home;
         height: 40vh;
       
+      }
+
+      a.block {
+        .card-text-container {
+          top: 18px;
+
+          .brand-title {
+          font-size: 24px;
+        }
+        }
       }
 
    }

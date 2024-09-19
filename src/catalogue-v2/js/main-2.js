@@ -29,6 +29,18 @@ $('.add-to-basket-main').click(function() {
 	setTimeout(function() { $('.modal-content-added').removeClass('show'); }, 3000);
 });
 
+$('#scrollUp').click(function(){
+	var y = $(window).scrollTop();
+ 	$('html, body').animate({ scrollTop: y + 750 })
+});
+
+$('#scrollDown').click(function(){
+	var y = $(window).scrollTop();
+ 	$('html, body').animate({ scrollTop: y - 750 })
+});
+
+
+
 
 $(document).click(function(event) {
   //if you click on anything except the modal itself or the "open modal" link, close the modal
@@ -44,31 +56,62 @@ $('.add-to-basket').click(function(){
 	$('.modal-content-size').addClass('show');
 });
 
+// $('.var-images.button').click(function(e){
+// 	e.preventDefault();
+// });
 
+// $.fn.isInViewport = function() {
+//     var elementTop = $(this).offset().top;
+//     var elementBottom = elementTop + $(this).outerHeight();
 
+//     var viewportTop = $(window).scrollTop();
+//     var viewportBottom = viewportTop + $(window).height();
+
+//     return elementBottom > viewportTop && elementTop < viewportBottom;
+// };
+
+// $('#add1').click(function(){
+// 	if ($('#1').isInViewport()) {
+// 		alert('hello no1')
+// 	$('.size-image').attr('src','https://arifliya.com/images-for-spreads/sp1/116674.jpg');
+// 	}
+// });
+
+// $('#add1').click(function(){
+// 	if ($('#2').isInViewport()) {
+// 		alert('hello no2')
+// 	$('.size-image').attr('src','https://arifliya.com/images-for-spreads/sp1/976313.jpg');
+// 	}
+// });
 
 
 $('#1').click(function(){
-	$('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/592057.jpg');
-	$('.style-title1').text('Rainbow Stripe Top');
+	$('.style-image1 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/116674.jpg');
+	$('.style-title1').text('Brown swede Boots');
 
-	$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/523859.jpg');
-	$('.style-title2').text('Skinny Jeans');
+	$('.style-image2 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/212755.jpg');
+	$('.style-title2').text('Bottle Green puffer jacket');
 
-	$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/542195.jpg');
-	$('.style-title3').text('Black Stud Point Loafers');
+	$('.style-image3 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/222819.jpg');
+	$('.style-title3').text('Black Puffer Jacket');
 
-	$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/common/Items/Default/Default/Publications/G67/shotview-315x472/86/560-046s2.jpg');
-	$('.style-title4').text('Multi Rainbow Stripe Sweater');
+	$('.style-image4 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/248143.jpg');
+	$('.style-title4').text('White Sweater');
 
-	$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/164506.jpg');
-	$('.style-title5').text('Denim Jacket');
+	$('.style-image5 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/276744.jpg');
+	$('.style-title5').text('Leather Jeans');
 
-	$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/530224.jpg');
-	$('.style-title6').text('Skinny Jeans');
+	$('.style-image6 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/667439.jpg');
+	$('.style-title6').text('Skinny Black Jeans');
+
+	$('.style-image7 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/856202.jpg');
+	$('.style-title7').text('Blue Zip Jumper');
+
+	$('.style-image8 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/976313.jpg');
+	$('.style-title8').text('Black Furry Collar Jacket');
 
 
-	$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/86.jpg');
+	// $('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/86.jpg');
 });
 
 
@@ -85,26 +128,29 @@ if ($(window).width() < 768) {
 
 $window.scroll(function() {
     if ( $window.scrollTop() >= distance ) {
-        $('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/592057.jpg');
-		$('.style-title1').text('Rainbow Stripe Top');
+		$('.style-image1 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/116674.jpg');
+	$('.style-title1').text('Brown swede Boots');
 
-		$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/523859.jpg');
-		$('.style-title2').text('Skinny Jeans');
+	$('.style-image2 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/212755.jpg');
+	$('.style-title2').text('Bottle Green puffer jacket');
 
-		$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/542195.jpg');
-		$('.style-title3').text('Black Stud Point Loafers');
+	$('.style-image3 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/222819.jpg');
+	$('.style-title3').text('Black Puffer Jacket');
 
-		$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/common/Items/Default/Default/Publications/G67/shotview-315x472/86/560-046s2.jpg');
-		$('.style-title4').text('Multi Rainbow Stripe Sweater');
+	$('.style-image4 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/248143.jpg');
+	$('.style-title4').text('White Sweater');
 
-		$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/164506.jpg');
-		$('.style-title5').text('Denim Jacket');
+	$('.style-image5 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/276744.jpg');
+	$('.style-title5').text('Leather Jeans');
 
-		$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/530224.jpg');
-		$('.style-title6').text('Skinny Jeans');
+	$('.style-image6 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/667439.jpg');
+	$('.style-title6').text('Skinny Black Jeans');
 
-		$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/86.jpg');
-		
+	$('.style-image7 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/856202.jpg');
+	$('.style-title7').text('Blue Zip Jumper');
+
+	$('.style-image8 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp1/976313.jpg');
+	$('.style-title8').text('Black Furry Collar Jacket');
     }
 });
 
@@ -112,26 +158,31 @@ $window.scroll(function() {
 
 
 $('#2').click(function(){
-		$('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/common/Items/Default/Default/Publications/G67/shotview-315x472/92/518-911s.jpg');
-		$('.style-title1').text('Graphic Sweat');
+		
 
-		$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/186243.jpg');
-		$('.style-title2').text('Casual Shirt');
+		$('.style-image1 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/140664.jpg');
+		$('.style-title1').text('Beige Purple Stripe Jumper');
 
-		$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/523859.jpg');
-		$('.style-title3').text('Skinny Jeans');
+		$('.style-image2 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/206980.jpg');
+		$('.style-title2').text('Skinny Light Jeans');
 
-		$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/584568.jpg');
-		$('.style-title4').text('Adidas Originals Campus');
+		$('.style-image3 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/219092.jpg');
+		$('.style-title3').text('Pink Peach Cardigan');
 
-		$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/568637.jpg');
-		$('.style-title5').text('Suede Bucket Bag');
+		$('.style-image4 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/247782.jpg');
+		$('.style-title4').text('Blue Slimfit Jeans');
 
-		$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/732672.jpg');
-		$('.style-title6').text('Hoop Earrings Three Pack');
+		$('.style-image5 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/274752.jpg');
+		$('.style-title5').text('Lavendar Top');
 
+		$('.style-image6 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/796467.jpg');
+		$('.style-title6').text('Heart Necklace');
 
-		$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/92.jpg');
+		$('.style-image7 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/840458.jpg');
+		$('.style-title7').text('White Trainers');
+
+		$('.style-image8 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/842549.jpg');
+		$('.style-title8').text('Turquois jumper');
 });
 
 
@@ -150,25 +201,29 @@ if ($(window).width() < 768) {
 $window.scroll(function() {
     if ( $window.scrollTop() >= distance2 ) {
 
-    	$('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/common/Items/Default/Default/Publications/G67/shotview-315x472/92/518-911s.jpg');
-		$('.style-title1').text('Graphic Sweat');
+		$('.style-image1 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/140664.jpg');
+		$('.style-title1').text('Beige Purple Stripe Jumper');
 
-		$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/186243.jpg');
-		$('.style-title2').text('Casual Shirt');
+		$('.style-image2 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/206980.jpg');
+		$('.style-title2').text('Skinny Light Jeans');
 
-		$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/523859.jpg');
-		$('.style-title3').text('Skinny Jeans');
+		$('.style-image3 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/219092.jpg');
+		$('.style-title3').text('Pink Peach Cardigan');
 
-		$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/584568.jpg');
-		$('.style-title4').text('Adidas Originals Campus');
+		$('.style-image4 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/247782.jpg');
+		$('.style-title4').text('Blue Slimfit Jeans');
 
-		$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/568637.jpg');
-		$('.style-title5').text('Suede Bucket Bag');
+		$('.style-image5 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/274752.jpg');
+		$('.style-title5').text('Lavendar Top');
 
-		$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/732672.jpg');
-		$('.style-title6').text('Hoop Earrings Three Pack');
-        
-		$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/92.jpg');
+		$('.style-image6 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/796467.jpg');
+		$('.style-title6').text('Heart Necklace');
+
+		$('.style-image7 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/840458.jpg');
+		$('.style-title7').text('White Trainers');
+
+		$('.style-image8 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp2/842549.jpg');
+		$('.style-title8').text('Turquois jumper');
 		
     }
 });
@@ -179,27 +234,29 @@ $window.scroll(function() {
 
 $('#3').click(function(){
 
-		$('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/516188.jpg');
-		$('.style-title1').text('Romantic Blouse');
+		$('.style-image1 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/260330.jpg');
+		$('.style-title1').text('White Jacket');
 
-		$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/158612.jpg');
-		$('.style-title2').text('Slim Jeans');
+		$('.style-image2 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/442894.jpg');
+		$('.style-title2').text('Flare Jeans');
 
-		$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/383251.jpg');
-		$('.style-title3').text('Grecian Toe Post');
+		$('.style-image3 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/457015.jpg');
+		$('.style-title3').text('Dark Blue Skinny Jeans');
 
-		$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/540990.jpg');
-		$('.style-title4').text('Neon Clutch Bag');
+		$('.style-image4 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/479996.jpg');
+		$('.style-title4').text('Lavendar Top');
 
-		$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/559060.jpg');
-		$('.style-title5').text('Pink Neon Belt');
+		$('.style-image5 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/489295.jpg');
+		$('.style-title5').text('Teal V Neck Top');
 
-		$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/168471.jpg');
-		$('.style-title6').text('Boot Cut Jeans');
+		$('.style-image6 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/660285.jpg');
+		$('.style-title6').text('Blue Stripe Shirt');
 		
+		$('.style-image7 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/688088.jpg');
+		$('.style-title7').text('Pink Stripe Shirt');
 
-
-		$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/98.jpg');
+		$('.style-image8 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/776184.jpg');
+		$('.style-title8').text('Star Trainers');
 });
 
 
@@ -217,28 +274,29 @@ if ($(window).width() < 768) {
 $window.scroll(function() {
     if ( $window.scrollTop() >= distance3 ) {
        
-    	$('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/516188.jpg');
-		$('.style-title1').text('Romantic Blouse');
+    	$('.style-image1 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/260330.jpg');
+		$('.style-title1').text('White Jacket');
 
-		$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/158612.jpg');
-		$('.style-title2').text('Slim Jeans');
+		$('.style-image2 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/442894.jpg');
+		$('.style-title2').text('Flare Jeans');
 
-		$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/383251.jpg');
-		$('.style-title3').text('Grecian Toe Post');
+		$('.style-image3 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/457015.jpg');
+		$('.style-title3').text('Dark Blue Skinny Jeans');
 
-		$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/540990.jpg');
-		$('.style-title4').text('Neon Clutch Bag');
+		$('.style-image4 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/479996.jpg');
+		$('.style-title4').text('Lavendar Top');
 
-		$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/559060.jpg');
-		$('.style-title5').text('Pink Neon Belt');
+		$('.style-image5 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/489295.jpg');
+		$('.style-title5').text('Teal V Neck Top');
 
-		$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/168471.jpg');
-		$('.style-title6').text('Boot Cut Jeans');
+		$('.style-image6 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/660285.jpg');
+		$('.style-title6').text('Blue Stripe Shirt');
 		
+		$('.style-image7 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/688088.jpg');
+		$('.style-title7').text('Pink Stripe Shirt');
 
-
-		$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/98.jpg');
-    	
+		$('.style-image8 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp3/776184.jpg');
+		$('.style-title8').text('Star Trainers');
 		
     }
 });
@@ -248,27 +306,29 @@ $window.scroll(function() {
 
 $('#4').click(function(){
 
-	$('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/770608.jpg');
-	$('.style-title1').text('Flex Bi-Stretch Skinny Jeans');
+		$('.style-image1 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/210618.jpg');
+		$('.style-title1').text('Black Bag');
 
-	$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/582214.jpg');
-	$('.style-title2').text('Oxford Shirt');
+		$('.style-image2 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/234260.jpg');
+		$('.style-title2').text('Stripe Top');
 
-	$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/589103.jpg');
-	$('.style-title3').text('Pink Leather Rucksack');
+		$('.style-image3 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/259691.jpg');
+		$('.style-title3').text('Rainbow Wolly Hat');
 
-	$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/542195.jpg');
-	$('.style-title4').text('Black Stud Point Loafers');
+		$('.style-image4 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/267484.jpg');
+		$('.style-title4').text('Raindow Hoodie');
 
-	$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/556706.jpg');
-	$('.style-title5').text('Detail Hoop Earrings');
+		$('.style-image5 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/280510.jpg');
+		$('.style-title5').text('Trainers With Stripes');
 
-	$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/591731.jpg');
-	$('.style-title6').text('Leather Biker Jacket');
-	
+		$('.style-image6 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/334739.jpg');
+		$('.style-title6').text('Skinny Dark Blue Jeans');
+		
+		$('.style-image7 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/641714.jpg');
+		$('.style-title7').text('Black Ankle Shoes');
 
-
-	$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/100.jpg');
+		$('.style-image8 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/871976.jpg');
+		$('.style-title8').text('Purple Aviator Sunglasses');
 });
 
 
@@ -286,28 +346,29 @@ if ($(window).width() < 768) {
 $window.scroll(function() {
     if ( $window.scrollTop() >= distance4 ) {
         
-    $('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/770608.jpg');
-	$('.style-title1').text('Flex Bi-Stretch Skinny Jeans');
+		$('.style-image1 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/210618.jpg');
+		$('.style-title1').text('Black Bag');
 
-	$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/582214.jpg');
-	$('.style-title2').text('Oxford Shirt');
+		$('.style-image2 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/234260.jpg');
+		$('.style-title2').text('Stripe Top');
 
-	$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/589103.jpg');
-	$('.style-title3').text('Pink Leather Rucksack');
+		$('.style-image3 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/259691.jpg');
+		$('.style-title3').text('Rainbow Wolly Hat');
 
-	$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/542195.jpg');
-	$('.style-title4').text('Black Stud Point Loafers');
+		$('.style-image4 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/267484.jpg');
+		$('.style-title4').text('Raindow Hoodie');
 
-	$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/556706.jpg');
-	$('.style-title5').text('Detail Hoop Earrings');
+		$('.style-image5 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/280510.jpg');
+		$('.style-title5').text('Trainers With Stripes');
 
-	$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/591731.jpg');
-	$('.style-title6').text('Leather Biker Jacket');
-	
+		$('.style-image6 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/334739.jpg');
+		$('.style-title6').text('Skinny Dark Blue Jeans');
+		
+		$('.style-image7 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/641714.jpg');
+		$('.style-title7').text('Black Ankle Shoes');
 
-
-	$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/100.jpg');
-
+		$('.style-image8 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp4/871976.jpg');
+		$('.style-title8').text('Purple Aviator Sunglasses');
 		
     }
 });
@@ -318,26 +379,29 @@ $window.scroll(function() {
 
 $('#5').click(function(){
 		
-		$('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/522598.jpg');
-		$('.style-title1').text('360° Super Skinny Jeans');
+		$('.style-image1 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/265367.jpg');
+		$('.style-title1').text('Blue Jeans');
 
-		$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/599994.jpg');
-		$('.style-title2').text('Leather Zip Top Clutch Bag');
+		$('.style-image2 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/280510.jpg');
+		$('.style-title2').text('White Trainers');
 
-		$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/178928.jpg');
-		$('.style-title3').text('Ruched Sleeve Jacket');
+		$('.style-image3 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/288856.jpg');
+		$('.style-title3').text('Brown Converse Trainers');
 
-		$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/539228.jpg');
-		$('.style-title4').text('360° Super Skinny Jeans');
+		$('.style-image4 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/641714.jpg');
+		$('.style-title4').text('Black Trainers');
 
-		$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/595482.jpg');
-		$('.style-title5').text('Multi Sequin Boxy Top');
+		$('.style-image5 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/815566.jpg');
+		$('.style-title5').text('Brown Tiger T-Shirt');
 
-		$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/549030.jpg');
-		$('.style-title6').text('Gladiator Stud Sandals');
+		$('.style-image6 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/863350.jpg');
+		$('.style-title6').text('Blue T-Shirt');
+		
+		$('.style-image7 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/867017.jpg');
+		$('.style-title7').text('Grey Printed T-Shirt');
 
-
-		$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/88.jpg');
+		$('.style-image8 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/896296.jpg');
+		$('.style-title8').text('Star T-Shirt');
 });
 
 if ($(window).width() < 768) {
@@ -354,229 +418,30 @@ if ($(window).width() < 768) {
 $window.scroll(function() {
     if ( $window.scrollTop() >= distance5 ) {
        
-    	$('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/522598.jpg');
-		$('.style-title1').text('360° Super Skinny Jeans');
+    	$('.style-image1 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/265367.jpg');
+		$('.style-title1').text('Blue Jeans');
 
-		$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/599994.jpg');
-		$('.style-title2').text('Leather Zip Top Clutch Bag');
+		$('.style-image2 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/280510.jpg');
+		$('.style-title2').text('White Trainers');
 
-		$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/178928.jpg');
-		$('.style-title3').text('Ruched Sleeve Jacket');
+		$('.style-image3 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/288856.jpg');
+		$('.style-title3').text('Brown Converse Trainers');
 
-		$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/539228.jpg');
-		$('.style-title4').text('360° Super Skinny Jeans');
+		$('.style-image4 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/641714.jpg');
+		$('.style-title4').text('Black Trainers');
 
-		$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/595482.jpg');
-		$('.style-title5').text('Multi Sequin Boxy Top');
+		$('.style-image5 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/815566.jpg');
+		$('.style-title5').text('Brown Tiger T-Shirt');
 
-		$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/549030.jpg');
-		$('.style-title6').text('Gladiator Stud Sandals');
+		$('.style-image6 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/863350.jpg');
+		$('.style-title6').text('Blue T-Shirt');
+		
+		$('.style-image7 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/867017.jpg');
+		$('.style-title7').text('Grey Printed T-Shirt');
 
-
-		$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/88.jpg');
+		$('.style-image8 .style-with-image').attr('src','https://arifliya.com/images-for-spreads/sp5/896296.jpg');
+		$('.style-title8').text('Star T-Shirt'); 
 
 		
     }
 });
-
-
-
-
-$('#6').click(function(){
-	
-	$('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/540247.jpg');
-	$('.style-title1').text('Denim Leggings');
-
-	$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/575086.jpg');
-	$('.style-title2').text('V-Neck Sweater');
-
-	$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/531440.jpg');
-	$('.style-title3').text('Leopard Print Scarf');
-
-	$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/590830.jpg');
-	$('.style-title4').text('Denim Leggings');
-
-	$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/508233.jpg');
-	$('.style-title5').text('V-Neck Sweater');
-
-	$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/567366.jpg');
-	$('.style-title6').text('Ankle Strap Sandals');
-
-
-	$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/90.jpg');
-});
-
-if ($(window).width() < 768) {
-	var distance6 = $('#6').offset().top - 100;
-    $window = $(window);
-} else {
-	var distance6 = $('#6').offset().top - 400;
-    $window = $(window);
-}
-
-// var distance6 = $('#6').offset().top - 400;
-//     $window = $(window);
-
-$window.scroll(function() {
-    if ( $window.scrollTop() >= distance6 ) {
-        
-    $('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/540247.jpg');
-	$('.style-title1').text('Denim Leggings');
-
-	$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/575086.jpg');
-	$('.style-title2').text('V-Neck Sweater');
-
-	$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/531440.jpg');
-	$('.style-title3').text('Leopard Print Scarf');
-
-	$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/590830.jpg');
-	$('.style-title4').text('Denim Leggings');
-
-	$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/508233.jpg');
-	$('.style-title5').text('V-Neck Sweater');
-
-	$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/567366.jpg');
-	$('.style-title6').text('Ankle Strap Sandals');
-
-
-	$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/90.jpg');
-
-		
-    }
-});
-
-
-
-
-
-$('#7').click(function(){
-		
-	$('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/157082.jpg');
-	$('.style-title1').text('Jersey Denim Leggings');
-
-	$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/543964.jpg');
-	$('.style-title2').text('Bobble Cardigan');
-
-	$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/569497.jpg');
-	$('.style-title3').text('Button Long Sleeve Stripe Top');
-
-	$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/158736.jpg');
-	$('.style-title4').text('Baseball Lace-Up Trainers');
-
-	$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/502124.jpg');
-	$('.style-title5').text('Jersey Denim Leggings');
-
-	$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/506918.jpg');
-	$('.style-title6').text('Bobble Cardigan');
-
-
-	$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/96.jpg');
-});
-
-if ($(window).width() < 768) {
-	var distance7 = $('#7').offset().top - 100;
-    $window = $(window);
-} else {
-	var distance7 = $('#7').offset().top - 400;
-    $window = $(window);
-}
-
-// var distance7 = $('#7').offset().top - 400;
-//     $window = $(window);
-
-$window.scroll(function() {
-    if ( $window.scrollTop() >= distance7 ) {
-       
-    $('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/157082.jpg');
-	$('.style-title1').text('Jersey Denim Leggings');
-
-	$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/543964.jpg');
-	$('.style-title2').text('Bobble Cardigan');
-
-	$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/569497.jpg');
-	$('.style-title3').text('Button Long Sleeve Stripe Top');
-
-	$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/158736.jpg');
-	$('.style-title4').text('Baseball Lace-Up Trainers');
-
-	$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/502124.jpg');
-	$('.style-title5').text('Jersey Denim Leggings');
-
-	$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/506918.jpg');
-	$('.style-title6').text('Bobble Cardigan');
-
-
-	$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/96.jpg');
-
-		
-    }
-});
-
-
-
-
-$('#8').click(function(){
-		
-	$('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/594762.jpg');
-	$('.style-title1').text('Bobble Cardigan');
-
-	$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/536569.jpg');
-	$('.style-title2').text('Striped T-Shirt');
-
-	$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/199865.jpg');
-	$('.style-title3').text('Jersey Denim Leggings');
-
-	$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/528868.jpg');
-	$('.style-title4').text('Top Handle Rucksack');
-
-	$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/137833.jpg');
-	$('.style-title5').text('Converse Chuck Taylor All Star Ox');
-
-	$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/550655.jpg');
-	$('.style-title6').text('Suede Fringe Duffle Bag');
-
-
-	$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/2096.jpg');
-});
-
-if ($(window).width() < 768) {
-	var distance8 = $('#8').offset().top - 100;
-    $window = $(window);
-} else {
-	var distance8 = $('#8').offset().top - 400;
-    $window = $(window);
-}
-
-// var distance8 = $('#8').offset().top - 400;
-//     $window = $(window);
-
-$window.scroll(function() {
-    if ( $window.scrollTop() >= distance8 ) {
-       
-    $('.style-image1 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/594762.jpg');
-	$('.style-title1').text('Bobble Cardigan');
-
-	$('.style-image2 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/536569.jpg');
-	$('.style-title2').text('Striped T-Shirt');
-
-	$('.style-image3 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/199865.jpg');
-	$('.style-title3').text('Jersey Denim Leggings');
-
-	$('.style-image4 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/528868.jpg');
-	$('.style-title4').text('Top Handle Rucksack');
-
-	$('.style-image5 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/137833.jpg');
-	$('.style-title5').text('Converse Chuck Taylor All Star Ox');
-
-	$('.style-image6 .style-with-image').attr('src','https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/AltItemShot/315x472/550655.jpg');
-	$('.style-title6').text('Suede Fringe Duffle Bag');
-
-
-	$('.var-images-modal img').attr('src','https://xcdn.next.co.uk/COMMON/Items/default/default/publications/G67/spreads/972/2096.jpg');
-
-		
-    }
-});
-
-
-
